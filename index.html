@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>GRUNAS PAUSAO (GP)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #003366, #0059b3);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #003366;
+        }
+
+        .categorias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .categoria {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .categoria:hover {
+            background-color: #e6f0ff;
+        }
+
+        .marcas {
+            display: none;
+            background: white;
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>GRUNAS PAUSAO (GP)</h1>
+    <p>Venta de electrodomésticos de las mejores marcas</p>
+</header>
+
+<section>
+    <h2>Bienvenido</h2>
+    <p style="text-align:center;">
+        En GRUNAS PAUSAO ofrecemos electrodomésticos de alta calidad
+        para tu hogar y negocio, con garantía y confianza.
+    </p>
+</section>
+
+<section>
+    <h2>Nuestros productos</h2>
+
+    <div class="categorias">
+        <div class="categoria" onclick="mostrar('lavadoras')">Lavadoras</div>
+        <div class="categoria" onclick="mostrar('neveras')">Neveras</div>
+        <div class="categoria" onclick="mostrar('cocinas')">Cocinas</div>
+        <div class="categoria" onclick="mostrar('aires')">Aires Acondicionados</div>
+        <div class="categoria" onclick="mostrar('tv')">Televisores</div>
+    </div>
+
+    <div id="lavadoras" class="marcas">
+        <h3>Marcas de Lavadoras</h3>
+        <ul>
+            <li>LG</li>
+            <li>Samsung</li>
+            <li>Whirlpool</li>
+            <li>Bosch</li>
+        </ul>
+    </div>
+
+    <div id="neveras" class="marcas">
+        <h3>Marcas de Neveras</h3>
+        <ul>
+            <li>Samsung</li>
+            <li>LG</li>
+            <li>Hisense</li>
+            <li>Balay</li>
+        </ul>
+    </div>
+
+    <div id="cocinas" class="marcas">
+        <h3>Marcas de Cocinas</h3>
+        <ul>
+            <li>Balay</li>
+            <li>Bosch</li>
+            <li>Teka</li>
+        </ul>
+    </div>
+
+    <div id="aires" class="marcas">
+        <h3>Marcas de Aires Acondicionados</h3>
+        <ul>
+            <li>Daikin</li>
+            <li>Mitsubishi</li>
+            <li>LG</li>
+        </ul>
+    </div>
+
+    <div id="tv" class="marcas">
+        <h3>Marcas de Televisores</h3>
+        <ul>
+            <li>Samsung</li>
+            <li>LG</li>
+            <li>Sony</li>
+        </ul>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 GRUNAS PAUSAO (GP)</p>
+</footer>
+
+<script>
+    function mostrar(id) {
+        document.querySelectorAll('.marcas').forEach(m => m.style.display = 'none');
+        document.getElementById(id).style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
